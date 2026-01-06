@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё Портфолио</title>
+    <style>
+        /* 1. БАЗОВЫЕ СТИЛИ */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 2. ШАПКА */
+        header {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        /* 3. FLEXBOX СЕКЦИЯ (Обо мне) */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Делаем фото круглым */
+            object-fit: cover;
+            border: 3px solid #4CAF50;
+        }
+
+        /* 4. КНОПКА */
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* 5. ФОРМА */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* 6. АДАПТИВНОСТЬ */
+        @media (max-width: 600px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Иван Иванов</h1>
+        <p>Начинающий веб-разработчик</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="profile">
+            <img src="https://via.placeholder.com/150" alt="Мое фото">
+            <div>
+                <h2>Немного о себе</h2>
+                <p>Я прошел свой первый урок по <strong>HTML и CSS</strong>. Теперь я умею:</p>
+                <ul>
+                    <li>Верстать структуру страниц</li>
+                    <li>Красить элементы через CSS</li>
+                    <li>Работать с Flexbox</li>
+                </ul>
+                <a href="#" class="btn">Написать мне</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Связаться со мной</h2>
+            <form>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш Email" required>
+                <textarea placeholder="Ваше сообщение" rows="4"></textarea>
+                <button type="submit" class="btn" style="border:none; cursor:pointer;">Отправить</button>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
